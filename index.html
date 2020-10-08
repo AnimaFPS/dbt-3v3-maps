@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>FOV and Focal Length Scaling Converter/ Calculator</title>
+		<title>Diabotical 3v3 Map Callouts</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -14,7 +14,8 @@
 					<nav>
 						<ul>
 							<li><a href="https://animafps.github.io" >Home</a></li>
-							<li><a href="https://animafps.github.io/fov-convert" class = "active" >FOV/ Focal Length Conversion</a></li>
+							<li><a href="https://animafps.github.io/fov-convert">FOV/ Focal Length Conversion</a></li>
+							<li><a href="https://animafps.github.io/dbt-3v3-maps" class = "active">DBT 3v3 Map Callouts</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -25,44 +26,8 @@
 				<!-- Intro -->
 					<section id="main" class = "wrapper">
 						<div class="inner">
-							<h1 class = "major">FOV and Focal Length Scaling Conversion</h1>
-							<span><iframe src="https://jscalc.io/embed/eYV83hGsWwIv8cHE" width="1000" height="550" frameborder="0" marginheight="0" marginwidth="0" style="border: 0px solid rgba(0,0,0,0.12)"></iframe></span>
-								<p>Here is a fov converter if you want the same fov in different games when your resolution aspect ratio is the same if you don't know the fov of your game use this tool to find it: <a #href = "https://www.desmos.com/calculator/3e9hs7usyr">https://www.desmos.com/calculator/3e9hs7usyr</a> And for the Focal Length Scaling function the input and the output fov type must be the same and this assumes that there is no other factors in play for things like scopes and ads and is just between hipfire sens and fovs unless you have a game like apex, quake and kovaaks which have auto focal length functions for ads</p>
-							<h4>Here is a video explaining why this works and why we need it</h3>
-							<span><iframe width="560" height="315" src="https://www.youtube.com/embed/s6uShOHeMH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-							<pre><code>
-// Using jscalc.io with math.js library
-// Key for variables
-//  a = the fov output table
-//  sixOHFOV = output 16:9 Horizontal FOV
-//  fourOHFOV = output 4:3 Horizontal FOV
-//  OFOV = output 1:1 Vertical FOV
-//  OSENS = output sens from focal length scaling
-//  IFOVT = input Fov type (values = 0.75, 0.5625 or 1 or the inverse ratio of horizontal/vertical resolution)
-//  FOV = input FOV value
-//  VRES = input Vertical resolution
-//  HRES = input Horizonatal resolution
-'use strict';
-var IFOVT;
-	
-if( inputs.IFOVT > 0 ){
-   IFOVT =  inputs.IFOVT;
-} else {
-  IFOVT = (inputs.VRES / inputs.HRES);
-}
-	
-return {
-  a: [{
-	sixOHFOV: math.atan(((IFOVT)/(0.5625)) * math.tan(inputs.FOV * Math.PI/360)) * 360/Math.PI,
-	fourOHFOV: math.atan(((IFOVT)/(0.75)) * math.tan(inputs.FOV * Math.PI/360)) * 360/Math.PI,
-	OVFOV: math.atan(((IFOVT)/(1)) * math.tan(inputs.FOV * Math.PI/360)) * 360/Math.PI
-},],
-	OSENS: (math.tan(inputs.OFOV*Math.PI/360)/math.tan(inputs.FOV*Math.PI/360))*inputs.ISENS
-};
-								</code></pre>
-								<ul class="actions">
-									<li><a href="https://github.com/animafps/fov-convert" class="button fit">GitHub Page</a></li>
-								</ul>
+							<h1 class = "major">Diabotical 3v3 Map Callouts</h1>
+					
 						</div>
 					</section>
 
